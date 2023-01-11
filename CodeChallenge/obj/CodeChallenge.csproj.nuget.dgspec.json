@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kewkimb\\Documents\\dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj": {}
+    "F:\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kewkimb\\Documents\\dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj": {
+    "F:\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kewkimb\\Documents\\dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj",
+        "projectUniqueName": "F:\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj",
         "projectName": "CodeChallenge",
-        "projectPath": "C:\\Users\\Kewkimb\\Documents\\dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj",
+        "projectPath": "F:\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj",
         "packagesPath": "C:\\Users\\Kewkimb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kewkimb\\Documents\\dotnet-code-challenge\\CodeChallenge\\obj\\",
+        "outputPath": "F:\\CodeChallenge\\CodeChallenge\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

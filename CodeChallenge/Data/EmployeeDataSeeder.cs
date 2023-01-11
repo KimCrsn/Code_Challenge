@@ -20,7 +20,7 @@ namespace CodeChallenge.Data
 
         public async Task Seed()
         {
-            if(!_employeeContext.Employees.Any())
+            if (!_employeeContext.Employees.Any())
             {
                 List<Employee> employees = LoadEmployees();
                 _employeeContext.Employees.AddRange(employees);
@@ -47,11 +47,10 @@ namespace CodeChallenge.Data
         private void FixUpReferences(List<Employee> employees)
         {
             var employeeIdRefMap = from employee in employees
-                                select new { Id = employee.EmployeeId, EmployeeRef = employee };
+                                   select new { Id = employee.EmployeeId, EmployeeRef = employee };
 
             employees.ForEach(employee =>
             {
-                
                 if (employee.DirectReports != null)
                 {
                     var referencedEmployees = new List<Employee>(employee.DirectReports.Count);

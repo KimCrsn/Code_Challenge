@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using CodeChallenge.Models;
 using Microsoft.Extensions.Logging;
 using CodeChallenge.Repositories;
+using Microsoft.AspNetCore.Mvc;
+using CodeChallenge.Data;
 
 namespace CodeChallenge.Services
 {
@@ -30,11 +32,46 @@ namespace CodeChallenge.Services
             return employee;
         }
 
+        public Compensation Create(Compensation compensation)
+        {
+            if (compensation != null)
+            {
+                _employeeRepository.Add(compensation);
+                _employeeRepository.SaveAsync().Wait();
+            }
+
+            return compensation;
+        }
+
         public Employee GetById(string id)
         {
             if(!String.IsNullOrEmpty(id))
             {
                 return _employeeRepository.GetById(id);
+            }
+
+            return null;
+        }
+
+        public Compensation GetCompById(string id)
+        {
+            if (!String.IsNullOrEmpty(id))
+            {
+                return _employeeRepository.GetCompById(id);
+            }
+
+            return null;
+        }
+
+        public ReportingStructure GetReportingStructure(string id)
+        {
+            if (!String.IsNullOrEmpty(id))
+            {
+                return new ReportingStructure()
+                {
+                    Employee = _employeeRepository.GetById(id),
+                    NumberOfReports = _employeeRepository.GetReportCount(id)
+                };
             }
 
             return null;

@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Numerics;
 using System.Threading.Tasks;
 
 namespace CodeChallenge.Models
@@ -12,6 +15,6 @@ namespace CodeChallenge.Models
         public String LastName { get; set; }
         public String Position { get; set; }
         public String Department { get; set; }
-        public List<Employee> DirectReports { get; set; }
+        public List<Employee> DirectReports { get; set; } = new List<Employee>(); // Empty list default instad of null to reduce type of check
     }
 }
