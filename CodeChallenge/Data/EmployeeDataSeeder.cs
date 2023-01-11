@@ -56,7 +56,13 @@ namespace CodeChallenge.Data
                     var referencedEmployees = new List<Employee>(employee.DirectReports.Count);
                     employee.DirectReports.ForEach(report =>
                     {
+                        // Add to correlation table and connect the direct report to the report employee
+                        ReportEmployee directReport = new ReportEmployee() { ReportEmployeeId = employee.EmployeeId };
+                        _employeeContext.ReportEmployees.Add(directReport);
+                        _employeeContext.SaveChanges();
+
                         var referencedEmployee = employeeIdRefMap.First(e => e.Id == report.EmployeeId).EmployeeRef;
+                        referencedEmployee.ReportEmployee = directReport;
                         referencedEmployees.Add(referencedEmployee);
                     });
                     employee.DirectReports = referencedEmployees;

@@ -26,6 +26,8 @@ namespace CodeChallenge.Services
             if(employee != null)
             {
                 _employeeRepository.Add(employee);
+                
+
                 _employeeRepository.SaveAsync().Wait();
             }
 

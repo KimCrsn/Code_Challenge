@@ -29,6 +29,16 @@ namespace CodeChallenge.Repositories
 
         public Employee Add(Employee employee)
         {
+            /* Check if a report to employee was added and if so, add the new created employee as a direct
+             * report under that report employee
+             */
+            if (employee.ReportEmployee != null)
+            {
+                _employeeContext.ReportEmployees.Add(employee.ReportEmployee);
+                var reportEmployee = GetById(employee.ReportEmployee.ReportEmployeeId);
+                reportEmployee.DirectReports.Add(employee);
+            }
+
             employee.EmployeeId = Guid.NewGuid().ToString();
             _employeeContext.Employees.Add(employee);
             return employee;
@@ -45,6 +55,7 @@ namespace CodeChallenge.Repositories
         public Employee GetById(string id)
         {
             return _employeeContext.Employees
+           .Include(e => e.ReportEmployee)
            .Include(p => p.DirectReports).ThenInclude(x => x.DirectReports)
            .FirstOrDefault(x => x.EmployeeId == id);
         }

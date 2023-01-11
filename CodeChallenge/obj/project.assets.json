@@ -761,24 +761,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kewkimb\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\KimCorson\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj",
+      "projectUniqueName": "C:\\Users\\KimCorson\\source\\repos\\Code_Challenge\\CodeChallenge\\CodeChallenge.csproj",
       "projectName": "CodeChallenge",
-      "projectPath": "F:\\CodeChallenge\\CodeChallenge\\CodeChallenge.csproj",
-      "packagesPath": "C:\\Users\\Kewkimb\\.nuget\\packages\\",
-      "outputPath": "F:\\CodeChallenge\\CodeChallenge\\obj\\",
+      "projectPath": "C:\\Users\\KimCorson\\source\\repos\\Code_Challenge\\CodeChallenge\\CodeChallenge.csproj",
+      "packagesPath": "C:\\Users\\KimCorson\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\KimCorson\\source\\repos\\Code_Challenge\\CodeChallenge\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Kewkimb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\KimCorson\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
